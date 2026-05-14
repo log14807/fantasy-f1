@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -20,11 +19,11 @@
   --good: #30d158;
   --bad: #ff453a;
   --warn: #ff9f0a;
-  --t1: #f4d03f;  /* yellow - kimi */
-  --t2: #2997ff;  /* blue - russell */
-  --t3: #ff453a;  /* red - hadjar */
-  --t4: #ff8c42;  /* orange - colapinto */
-  --t5: #30d158;  /* green - fleetwood */
+  --t1: #f4d03f;
+  --t2: #2997ff;
+  --t3: #ff453a;
+  --t4: #ff8c42;
+  --t5: #30d158;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
@@ -44,211 +43,172 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 input, select { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line); padding: 6px 10px; border-radius: 4px; }
 input:focus, select:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
 
-/* –––––––– Header –––––––– */
 header.nav {
-position: sticky; top: 0; z-index: 50;
-display: flex; align-items: center; gap: 24px;
-padding: 18px 24px;
-background: rgba(0,0,0,0.85);
-backdrop-filter: blur(20px);
-border-bottom: 1px solid var(–line);
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 24px;
+  padding: 18px 24px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
 }
 .brand { font-weight: 700; font-size: 20px; letter-spacing: -0.5px; }
-.year { color: var(–muted); font-size: 12px; }
+.year { color: var(--muted); font-size: 12px; }
 .tabs { display: flex; gap: 18px; margin-left: auto; }
 .tab {
-font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
-color: var(–accent); opacity: 0.55;
-padding: 6px 0;
-transition: opacity 0.2s;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); opacity: 0.55;
+  padding: 6px 0;
+  transition: opacity 0.2s;
 }
 .tab.active { opacity: 1; }
 .tab:hover { opacity: 0.85; }
 .edit-toggle {
-font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-color: var(–muted);
-padding: 6px 10px;
-border: 1px solid var(–line);
-border-radius: 4px;
-margin-left: 12px;
-transition: all 0.2s;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted);
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-left: 12px;
+  transition: all 0.2s;
 }
-.edit-toggle:hover { color: var(–text); border-color: var(–text); }
-.edit-toggle.on { color: var(–warn); border-color: var(–warn); }
+.edit-toggle:hover { color: var(--text); border-color: var(--text); }
+.edit-toggle.on { color: var(--warn); border-color: var(--warn); }
 
-/* –––––––– Layout –––––––– */
 main { max-width: 920px; margin: 0 auto; padding: 0 24px; }
 section { display: none; padding: 40px 0; }
-section.active { display: block; }
-
-h1 { font-family: ‘Space Grotesk’, sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -2px; line-height: 1; }
-h2 { font-family: ‘Space Grotesk’, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -1px; }
-h3 { font-family: ‘Space Grotesk’, sans-serif; font-weight: 500; font-size: 20px; letter-spacing: -0.3px; }
-.eyebrow { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(–muted); margin-bottom: 8px; }
-.meta { color: var(–muted); font-size: 12px; }
-
-/* –––––––– Standings: podium –––––––– */
-.standings-head {
-display: flex; justify-content: space-between; align-items: flex-start;
-margin-bottom: 32px;
-}
-.podium {
-display: grid; grid-template-columns: 1fr 1.2fr 1fr;
-align-items: end; gap: 20px;
-padding: 60px 0 30px;
-position: relative;
-}
-.podium-slot { text-align: center; }
-.podium-slot .name { font-size: 13px; font-weight: 500; margin-bottom: 6px; min-height: 32px; display: flex; align-items: end; justify-content: center; }
-.podium-slot .score { font-family: ‘Space Grotesk’, sans-serif; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; }
-.podium-slot .bar { height: 3px; margin-top: 10px; border-radius: 2px; }
-.podium-slot.first .score { font-size: 64px; }
-.podium-slot.second { transform: translateY(20px); }
-.podium-slot.third  { transform: translateY(35px); }
-.podium-rank {
-font-size: 11px; letter-spacing: 3px; color: var(–muted); text-transform: uppercase;
-margin-top: 18px;
-}
-
-/* –––––––– Standings: table –––––––– */
-.tbl { width: 100%; margin-top: 60px; border-collapse: collapse; }
+section.active { di
+                .tbl { width: 100%; margin-top: 60px; border-collapse: collapse; }
 .tbl thead th {
-font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-color: var(–muted); font-weight: 400;
-padding: 14px 12px; text-align: left;
-border-bottom: 1px solid var(–line);
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); font-weight: 400;
+  padding: 14px 12px; text-align: left;
+  border-bottom: 1px solid var(--line);
 }
 .tbl thead th.right { text-align: right; }
 .tbl tbody td {
-padding: 22px 12px;
-border-bottom: 1px solid var(–line);
-vertical-align: middle;
+  padding: 22px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
 }
 .tbl tbody tr:hover { background: rgba(255,255,255,0.02); }
-.pos { font-family: ‘Space Grotesk’, sans-serif; font-size: 28px; font-weight: 500; color: var(–dim); width: 44px; }
-.pos.p1 { color: var(–t1); }  /* dynamic - overridden inline by team color but defaults */
+.pos { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 500; color: var(--dim); width: 44px; }
+.pos.p1 { color: var(--t1); }
 .team-cell { display: flex; align-items: center; gap: 12px; }
 .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .team-name { font-weight: 500; font-size: 15px; margin-bottom: 2px; }
-.team-drivers { font-size: 11px; color: var(–muted); letter-spacing: 0.5px; }
-.total { font-family: ‘Space Grotesk’, sans-serif; font-size: 26px; font-weight: 500; text-align: right; letter-spacing: -0.5px; }
-.gap-cell { text-align: right; color: var(–bad); font-size: 13px; width: 80px; }
-.gap-cell.lead { color: var(–muted); }
+.team-drivers { font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+.total { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 500; text-align: right; letter-spacing: -0.5px; }
+.gap-cell { text-align: right; color: var(--bad); font-size: 13px; width: 80px; }
+.gap-cell.lead { color: var(--muted); }
 
-/* –––––––– Breakdown –––––––– */
 .round-tabs {
-display: flex; gap: 12px; margin: 24px 0 36px; flex-wrap: wrap;
+  display: flex; gap: 12px; margin: 24px 0 36px; flex-wrap: wrap;
 }
 .round-pill {
-display: flex; flex-direction: column; align-items: center;
-padding: 12px 20px;
-border: 1px solid var(–line);
-border-radius: 10px;
-min-width: 100px;
-transition: all 0.2s;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  min-width: 100px;
+  transition: all 0.2s;
 }
-.round-pill .r { font-size: 11px; letter-spacing: 1px; color: var(–muted); }
+.round-pill .r { font-size: 11px; letter-spacing: 1px; color: var(--muted); }
 .round-pill .flag { font-size: 22px; margin: 2px 0; }
-.round-pill .country { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(–accent); }
-.round-pill.active { border-color: var(–accent); }
-.round-pill:hover { border-color: var(–text); }
+.round-pill .country { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+.round-pill.active { border-color: var(--accent); }
+.round-pill:hover { border-color: var(--text); }
 .round-pill.upcoming { opacity: 0.4; }
-.round-pill.upcoming .country { color: var(–muted); }
+.round-pill.upcoming .country { color: var(--muted); }
 
 .round-info { margin-bottom: 32px; }
 .round-info h2 { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
 .sprint-tag {
-display: inline-block;
-font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-color: var(–good);
-padding: 4px 10px;
-border: 1px solid var(–good);
-border-radius: 4px;
-margin-top: 12px;
+  display: inline-block;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--good);
+  padding: 4px 10px;
+  border: 1px solid var(--good);
+  border-radius: 4px;
+  margin-top: 12px;
 }
 
 .team-block {
-margin-bottom: 28px;
-border-left: 3px solid var(–accent);
-padding-left: 18px;
+  margin-bottom: 28px;
+  border-left: 3px solid var(--accent);
+  padding-left: 18px;
 }
 .team-block-head {
-display: flex; justify-content: space-between; align-items: baseline;
-margin-bottom: 14px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 14px;
 }
 .team-block-head .name { font-weight: 500; font-size: 16px; }
-.team-block-head .pts { font-family: ‘Space Grotesk’, sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; }
+.team-block-head .pts { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; }
 
 .driver-tbl { width: 100%; border-collapse: collapse; }
 .driver-tbl thead th {
-font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-color: var(–muted); font-weight: 400;
-padding: 8px 8px; text-align: left;
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); font-weight: 400;
+  padding: 8px 8px; text-align: left;
 }
 .driver-tbl thead th.right { text-align: right; }
 .driver-tbl tbody td {
-padding: 12px 8px;
-border-top: 1px solid var(–line);
-font-size: 13px;
+  padding: 12px 8px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
 }
-.driver-tbl tbody tr.bench td { color: var(–muted); font-style: italic; }
-.driver-tbl tbody tr.bench td:first-child::after { content: “ · BENCH”; font-size: 9px; letter-spacing: 1px; color: var(–muted); }
+.driver-tbl tbody tr.bench td { color: var(--muted); font-style: italic; }
+.driver-tbl tbody tr.bench td:first-child::after { content: " · BENCH"; font-size: 9px; letter-spacing: 1px; color: var(--muted); }
 .driver-name { font-weight: 500; }
 .session-cell { line-height: 1.3; }
 .session-cell .pos-tag { font-weight: 500; }
-.session-cell .pts-tag { font-size: 11px; color: var(–muted); display: block; }
-.session-cell .pts-tag.scored { color: var(–good); }
-.session-cell .pts-tag.dnf { color: var(–bad); }
-.round-total { text-align: right; font-family: ‘Space Grotesk’, sans-serif; font-weight: 500; font-size: 18px; }
-
-/* –––––––– Scoring page –––––––– */
-.scoring-grid { display: grid; gap: 32px; }
+.session-cell .pts-tag { font-size: 11px; color: var(--muted); display: block; }
+.session-cell .pts-tag.scored { color: var(--good); }
+.session-cell .pts-tag.dnf { color: var(--bad); }
+.round-total { text-align: right; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; }.scoring-grid { display: grid; gap: 32px; }
 .scoring-card {
-border: 1px solid var(–line);
-border-radius: 12px;
-padding: 24px;
-background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
 }
 .scoring-card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
 .scoring-card .icon { font-size: 22px; }
-.scoring-card .sub { color: var(–muted); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
+.scoring-card .sub { color: var(--muted); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
 .bar-row { display: flex; align-items: center; gap: 16px; margin: 8px 0; }
-.bar-row .lab { width: 90px; font-size: 12px; color: var(–dim); }
+.bar-row .lab { width: 90px; font-size: 12px; color: var(--dim); }
 .bar-row .bar { flex: 1; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-weight: 500; font-size: 13px; }
 .bar.race { background: linear-gradient(90deg, #5a0000, #c0181c); }
 .bar.qual { background: linear-gradient(90deg, #6a3500, #e08820); }
 .bar.sprint { background: linear-gradient(90deg, #003d18, #1f9d4d); }
 
-.roster-rules { margin-top: 24px; border: 1px solid var(–line); border-radius: 12px; padding: 24px; }
+.roster-rules { margin-top: 24px; border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
 .roster-rules h3 { margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .roster-rules ul { list-style: none; }
 .roster-rules li { padding: 8px 0 8px 20px; position: relative; font-size: 13px; }
-.roster-rules li::before { content: “●”; position: absolute; left: 0; color: var(–accent); font-size: 8px; top: 13px; }
+.roster-rules li::before { content: "\25CF"; position: absolute; left: 0; color: var(--accent); font-size: 8px; top: 13px; }
 
-/* –––––––– Edit mode –––––––– */
 .edit-banner {
-display: none;
-position: fixed; bottom: 0; left: 0; right: 0;
-padding: 14px 20px;
-background: var(–warn); color: #000;
-font-size: 12px; font-weight: 500; letter-spacing: 0.5px;
-z-index: 100;
-display: none;
-justify-content: space-between; align-items: center;
-flex-wrap: wrap; gap: 12px;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  padding: 14px 20px;
+  background: var(--warn); color: #000;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.5px;
+  z-index: 100;
+  display: none;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
 }
 body.edit-mode .edit-banner { display: flex; }
 .edit-banner button {
-background: #000; color: var(–warn);
-padding: 8px 16px; border-radius: 4px;
-font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  background: #000; color: var(--warn);
+  padding: 8px 16px; border-radius: 4px;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
 }
 .edit-input {
-background: rgba(255,255,255,0.04);
-border: 1px solid var(–line);
-padding: 4px 8px; border-radius: 4px;
-font-size: 12px; width: 60px;
-color: var(–text);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  padding: 4px 8px; border-radius: 4px;
+  font-size: 12px; width: 60px;
+  color: var(--text);
 }
 .edit-input.wide { width: 100px; }
 body:not(.edit-mode) .edit-input { display: none; }
@@ -256,73 +216,69 @@ body.edit-mode .read-only { display: none; }
 .edit-only { display: none; }
 body.edit-mode .edit-only { display: inline; }
 .bench-row {
-margin: 0 0 12px;
-padding: 8px 0;
-font-size: 12px;
+  margin: 0 0 12px;
+  padding: 8px 0;
+  font-size: 12px;
 }
 .bench-row select {
-font: inherit; color: var(–text);
-background: rgba(255,255,255,0.04);
-border: 1px solid var(–line);
-padding: 5px 10px; border-radius: 4px;
+  font: inherit; color: var(--text);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  padding: 5px 10px; border-radius: 4px;
 }
 .edit-add-round {
-margin-top: 20px;
-padding: 14px 20px;
-border: 1px dashed var(–line);
-border-radius: 8px;
-color: var(–muted);
-text-align: center;
-letter-spacing: 1.5px; text-transform: uppercase; font-size: 11px;
-display: none;
+  margin-top: 20px;
+  padding: 14px 20px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 1.5px; text-transform: uppercase; font-size: 11px;
+  display: none;
 }
 body.edit-mode .edit-add-round { display: block; }
-.edit-add-round:hover { color: var(–text); border-color: var(–text); }
+.edit-add-round:hover { color: var(--text); border-color: var(--text); }
 
 .delete-btn {
-font-size: 10px; color: var(–bad); margin-left: 8px;
-display: none;
+  font-size: 10px; color: var(--bad); margin-left: 8px;
+  display: none;
 }
 body.edit-mode .delete-btn { display: inline; }
 body.edit-mode .delete-btn:hover { text-decoration: underline; }
 
-/* –––––––– Footer –––––––– */
 footer {
-text-align: center;
-margin-top: 80px;
-padding: 30px 20px;
-font-size: 11px;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: var(–muted);
-border-top: 1px solid var(–line);
+  text-align: center;
+  margin-top: 80px;
+  padding: 30px 20px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
 }
 
 @media (max-width: 640px) {
-header.nav { padding: 14px 16px; gap: 12px; flex-wrap: wrap; }
-.tabs { gap: 14px; margin-left: 0; width: 100%; }
-.edit-toggle { margin-left: 0; }
-main { padding: 0 16px; }
-h1 { font-size: 38px; }
-.standings-head { flex-direction: column; gap: 8px; }
-.podium { gap: 8px; padding: 30px 0 20px; }
-.podium-slot .score { font-size: 32px; }
-.podium-slot.first .score { font-size: 44px; }
-.podium-slot .name { font-size: 11px; }
-.podium-rank { font-size: 10px; }
-.pos { font-size: 22px; width: 32px; }
-.total { font-size: 22px; }
-.team-name { font-size: 14px; }
-.team-drivers { font-size: 10px; }
-.driver-tbl tbody td { font-size: 12px; padding: 10px 4px; }
-.driver-tbl thead th { padding: 8px 4px; }
+  header.nav { padding: 14px 16px; gap: 12px; flex-wrap: wrap; }
+  .tabs { gap: 14px; margin-left: 0; width: 100%; }
+  .edit-toggle { margin-left: 0; }
+  main { padding: 0 16px; }
+  h1 { font-size: 38px; }
+  .standings-head { flex-direction: column; gap: 8px; }
+  .podium { gap: 8px; padding: 30px 0 20px; }
+  .podium-slot .score { font-size: 32px; }
+  .podium-slot.first .score { font-size: 44px; }
+  .podium-slot .name { font-size: 11px; }
+  .podium-rank { font-size: 10px; }
+  .pos { font-size: 22px; width: 32px; }
+  .total { font-size: 22px; }
+  .team-name { font-size: 14px; }
+  .team-drivers { font-size: 10px; }
+  .driver-tbl tbody td { font-size: 12px; padding: 10px 4px; }
+  .driver-tbl thead th { padding: 8px 4px; }
 }
 </style>
-
 </head>
-<body>
-
-<header class="nav">
+<body><header class="nav">
   <div class="brand">F1</div>
   <div class="year">2026</div>
   <nav class="tabs">
@@ -334,7 +290,6 @@ h1 { font-size: 38px; }
 </header>
 
 <main>
-  <!-- ============ STANDINGS ============ -->
   <section id="standings" class="active">
     <div class="standings-head">
       <div>
@@ -344,25 +299,20 @@ h1 { font-size: 38px; }
       <div class="meta" id="dateMeta"></div>
     </div>
 
-```
-<div class="podium" id="podium"></div>
+    <div class="podium" id="podium"></div>
 
-<table class="tbl">
-  <thead>
-    <tr>
-      <th style="width:60px;">Pos</th>
-      <th>Team</th>
-      <th class="right">Total</th>
-      <th class="right">Gap</th>
-    </tr>
-  </thead>
-  <tbody id="standingsBody"></tbody>
-</table>
-```
-
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:60px;">Pos</th>
+          <th>Team</th>
+          <th class="right">Total</th>
+          <th class="right">Gap</th>
+        </tr>
+      </thead>
+      <tbody id="standingsBody"></tbody>
+    </table>
   </section>
-
-  <!-- ============ BREAKDOWN ============ -->
 
   <section id="breakdown">
     <div class="eyebrow">Every Driver · Every Session · Every Round</div>
@@ -372,65 +322,60 @@ h1 { font-size: 38px; }
     <button class="edit-add-round" id="addRoundBtn">+ Add new round</button>
   </section>
 
-  <!-- ============ SCORING ============ -->
-
   <section id="scoring">
     <div class="eyebrow">League Format</div>
     <h1>Scoring</h1>
     <div class="meta" style="margin-bottom: 32px;">All scoring uses multiples of 5 · Sprint Qualifying is not scored</div>
 
-```
-<div class="scoring-grid">
-  <div class="scoring-card">
-    <h3><span class="icon">🏁</span> Race</h3>
-    <div class="sub">Points through P15</div>
-    <div class="bar-row"><div class="lab">P1</div><div class="bar race" style="width:100%">50 pts</div></div>
-    <div class="bar-row"><div class="lab">P2</div><div class="bar race" style="width:80%">40 pts</div></div>
-    <div class="bar-row"><div class="lab">P3</div><div class="bar race" style="width:70%">35 pts</div></div>
-    <div class="bar-row"><div class="lab">P4</div><div class="bar race" style="width:60%">30 pts</div></div>
-    <div class="bar-row"><div class="lab">P5</div><div class="bar race" style="width:50%">25 pts</div></div>
-    <div class="bar-row"><div class="lab">P6</div><div class="bar race" style="width:40%">20 pts</div></div>
-    <div class="bar-row"><div class="lab">P7 — P9</div><div class="bar race" style="width:30%">15 pts</div></div>
-    <div class="bar-row"><div class="lab">P10 — P12</div><div class="bar race" style="width:20%">10 pts</div></div>
-    <div class="bar-row"><div class="lab">P13 — P15</div><div class="bar race" style="width:10%">5 pts</div></div>
-  </div>
+    <div class="scoring-grid">
+      <div class="scoring-card">
+        <h3><span class="icon">&#127937;</span> Race</h3>
+        <div class="sub">Points through P15</div>
+        <div class="bar-row"><div class="lab">P1</div><div class="bar race" style="width:100%">50 pts</div></div>
+        <div class="bar-row"><div class="lab">P2</div><div class="bar race" style="width:80%">40 pts</div></div>
+        <div class="bar-row"><div class="lab">P3</div><div class="bar race" style="width:70%">35 pts</div></div>
+        <div class="bar-row"><div class="lab">P4</div><div class="bar race" style="width:60%">30 pts</div></div>
+        <div class="bar-row"><div class="lab">P5</div><div class="bar race" style="width:50%">25 pts</div></div>
+        <div class="bar-row"><div class="lab">P6</div><div class="bar race" style="width:40%">20 pts</div></div>
+        <div class="bar-row"><div class="lab">P7 &mdash; P9</div><div class="bar race" style="width:30%">15 pts</div></div>
+        <div class="bar-row"><div class="lab">P10 &mdash; P12</div><div class="bar race" style="width:20%">10 pts</div></div>
+        <div class="bar-row"><div class="lab">P13 &mdash; P15</div><div class="bar race" style="width:10%">5 pts</div></div>
+      </div>
 
-  <div class="scoring-card">
-    <h3><span class="icon">⏱️</span> Qualifying</h3>
-    <div class="sub">Points through P10</div>
-    <div class="bar-row"><div class="lab">P1 (Pole)</div><div class="bar qual" style="width:100%">25 pts</div></div>
-    <div class="bar-row"><div class="lab">P2 — P3</div><div class="bar qual" style="width:60%">15 pts</div></div>
-    <div class="bar-row"><div class="lab">P4 — P6</div><div class="bar qual" style="width:40%">10 pts</div></div>
-    <div class="bar-row"><div class="lab">P7 — P10</div><div class="bar qual" style="width:20%">5 pts</div></div>
-  </div>
+      <div class="scoring-card">
+        <h3><span class="icon">&#9201;&#65039;</span> Qualifying</h3>
+        <div class="sub">Points through P10</div>
+        <div class="bar-row"><div class="lab">P1 (Pole)</div><div class="bar qual" style="width:100%">25 pts</div></div>
+        <div class="bar-row"><div class="lab">P2 &mdash; P3</div><div class="bar qual" style="width:60%">15 pts</div></div>
+        <div class="bar-row"><div class="lab">P4 &mdash; P6</div><div class="bar qual" style="width:40%">10 pts</div></div>
+        <div class="bar-row"><div class="lab">P7 &mdash; P10</div><div class="bar qual" style="width:20%">5 pts</div></div>
+      </div>
 
-  <div class="scoring-card">
-    <h3><span class="icon">⚡</span> Sprint Race</h3>
-    <div class="sub">Points through P10</div>
-    <div class="bar-row"><div class="lab">P1</div><div class="bar sprint" style="width:100%">25 pts</div></div>
-    <div class="bar-row"><div class="lab">P2</div><div class="bar sprint" style="width:80%">20 pts</div></div>
-    <div class="bar-row"><div class="lab">P3</div><div class="bar sprint" style="width:60%">15 pts</div></div>
-    <div class="bar-row"><div class="lab">P4 — P6</div><div class="bar sprint" style="width:40%">10 pts</div></div>
-    <div class="bar-row"><div class="lab">P7 — P10</div><div class="bar sprint" style="width:20%">5 pts</div></div>
-  </div>
+      <div class="scoring-card">
+        <h3><span class="icon">&#9889;</span> Sprint Race</h3>
+        <div class="sub">Points through P10</div>
+        <div class="bar-row"><div class="lab">P1</div><div class="bar sprint" style="width:100%">25 pts</div></div>
+        <div class="bar-row"><div class="lab">P2</div><div class="bar sprint" style="width:80%">20 pts</div></div>
+        <div class="bar-row"><div class="lab">P3</div><div class="bar sprint" style="width:60%">15 pts</div></div>
+        <div class="bar-row"><div class="lab">P4 &mdash; P6</div><div class="bar sprint" style="width:40%">10 pts</div></div>
+        <div class="bar-row"><div class="lab">P7 &mdash; P10</div><div class="bar sprint" style="width:20%">5 pts</div></div>
+      </div>
 
-  <div class="roster-rules">
-    <h3><span class="icon">📋</span> Roster Rules</h3>
-    <ul>
-      <li><strong>4 drivers</strong> per team roster</li>
-      <li><strong>Start 3</strong> drivers each race weekend</li>
-      <li><strong>1 bench driver</strong> — scores zero (still tracked for fun)</li>
-      <li><strong>Free swaps</strong> — change bench driver between any rounds</li>
-    </ul>
-  </div>
-</div>
-```
-
+      <div class="roster-rules">
+        <h3><span class="icon">&#128203;</span> Roster Rules</h3>
+        <ul>
+          <li><strong>4 drivers</strong> per team roster</li>
+          <li><strong>Start 3</strong> drivers each race weekend</li>
+          <li><strong>1 bench driver</strong> &mdash; scores zero (still tracked for fun)</li>
+          <li><strong>Free swaps</strong> &mdash; change bench driver between any rounds</li>
+        </ul>
+      </div>
+    </div>
   </section>
 </main>
 
 <div class="edit-banner">
-  <span>EDIT MODE — change positions and bench drivers, then export</span>
+  <span>EDIT MODE &mdash; change positions and bench drivers, then export</span>
   <span>
     <button id="exportBtn">Download Updated Site</button>
     <button id="exportJsonBtn">Export Data Only</button>
@@ -439,11 +384,7 @@ h1 { font-size: 38px; }
 
 <footer>
   Fantasy F1 League · 2026 Season · 24 Rounds · <span id="footRounds"></span> Completed
-</footer>
-
-<!-- =================== DATA =================== -->
-
-<script id="leagueData" type="application/json">
+</footer><script id="leagueData" type="application/json">
 {
   "season": 2026,
   "totalRounds": 24,
@@ -559,18 +500,46 @@ h1 { font-size: 38px; }
         "Alonso":      {"qual":21, "race":18},
         "Stroll":      {"qual":22, "race":"DNF"}
       }
+    },
+    {
+      "id":"r4",
+      "name":"Miami Grand Prix",
+      "circuit":"Miami International Autodrome",
+      "date":"3 May 2026",
+      "flag":"🇺🇸",
+      "country":"Miami",
+      "isSprint": true,
+      "benches": {"kimi":"Pérez","russell":"Lindblad","hadjar":"Hülkenberg","colapinto":"Colapinto","fleetwood":"Alonso"},
+      "results": {
+        "Antonelli":   {"qual":1,  "sprint":6,  "race":1},
+        "Verstappen":  {"qual":2,  "sprint":5,  "race":5},
+        "Leclerc":     {"qual":3,  "sprint":3,  "race":8},
+        "Norris":      {"qual":4,  "sprint":1,  "race":2},
+        "Russell":     {"qual":5,  "sprint":4,  "race":4},
+        "Hamilton":    {"qual":6,  "sprint":7,  "race":6},
+        "Piastri":     {"qual":7,  "sprint":2,  "race":3},
+        "Colapinto":   {"qual":8,  "sprint":10, "race":7},
+        "Gasly":       {"qual":9,  "sprint":8,  "race":"DNF"},
+        "Hülkenberg":  {"qual":10, "sprint":"DNS","race":"DNF"},
+        "Lawson":      {"qual":11, "sprint":14, "race":"DNF"},
+        "Bearman":     {"qual":12, "sprint":12, "race":11},
+        "Sainz":       {"qual":13, "sprint":13, "race":9},
+        "Ocon":        {"qual":14, "sprint":11, "race":13},
+        "Albon":       {"qual":15, "sprint":18, "race":10},
+        "Lindblad":    {"qual":16, "sprint":"DNS","race":14},
+        "Alonso":      {"qual":17, "sprint":15, "race":15},
+        "Stroll":      {"qual":18, "sprint":17, "race":17},
+        "Bottas":      {"qual":19, "sprint":19, "race":18},
+        "Pérez":       {"qual":20, "sprint":16, "race":16},
+        "Bortoleto":   {"qual":21, "sprint":"DNF","race":12},
+        "Hadjar":      {"qual":null,"sprint":9,  "race":"DNF"}
+      }
     }
   ]
 }
-</script>
-
-<script>
-// ====================================================
-//  F1 Fantasy League · single-file app
-// ====================================================
+</script><script>
 let DATA = JSON.parse(document.getElementById('leagueData').textContent);
 
-// ---- scoring lookup ----
 function pointsFor(table, pos) {
   if (pos === null || pos === undefined || pos === "DNF" || pos === "DNS") return 0;
   const p = Number(pos);
@@ -583,9 +552,7 @@ function racePts(p)   { return pointsFor(DATA.scoring.race, p); }
 function qualPts(p)   { return pointsFor(DATA.scoring.qual, p); }
 function sprintPts(p) { return pointsFor(DATA.scoring.sprint, p); }
 
-// ---- aggregate calculations ----
 function getBench(team, round) {
-  // bench can be set per-round; fall back to last roster member
   return round.benches?.[team.id] || team.roster[team.roster.length - 1];
 }
 function getStarters(team, round) {
@@ -606,7 +573,6 @@ function teamRoundPoints(team, round) {
     detail.push({ driver, qual: r.qual, sprint: r.sprint, race: r.race, q, s, ra, total: dt, bench: isBench });
     if (!isBench) total += dt;
   }
-  // sort: starters first (in roster order), bench last
   detail.sort((a, b) => (a.bench ? 1 : 0) - (b.bench ? 1 : 0));
   return { total, detail };
 }
@@ -616,9 +582,6 @@ function teamSeasonPoints(team) {
   return total;
 }
 
-// ====================================================
-//  RENDER · Standings
-// ====================================================
 function renderStandings() {
   const completed = DATA.rounds.length;
   document.getElementById('roundsMeta').textContent = `After ${completed} of ${DATA.totalRounds} rounds`;
@@ -631,7 +594,6 @@ function renderStandings() {
     .map(t => ({ ...t, total: teamSeasonPoints(t) }))
     .sort((a, b) => b.total - a.total);
 
-  // Podium - 2nd / 1st / 3rd
   const podium = document.getElementById('podium');
   const order = [standings[1], standings[0], standings[2]].filter(Boolean);
   const slots = ['second', 'first', 'third'];
@@ -645,7 +607,6 @@ function renderStandings() {
     </div>
   `).join('');
 
-  // Table
   const leader = standings[0]?.total ?? 0;
   const body = document.getElementById('standingsBody');
   body.innerHTML = standings.map((t, i) => {
@@ -668,9 +629,6 @@ function renderStandings() {
   }).join('');
 }
 
-// ====================================================
-//  RENDER · Breakdown
-// ====================================================
 let activeRoundIdx = 0;
 
 function renderRoundTabs() {
@@ -741,7 +699,6 @@ function renderBreakdown() {
   }
   out.innerHTML = html;
 
-  // wire up edit inputs
   out.querySelectorAll('.edit-input').forEach(inp => {
     inp.oninput = () => {
       const driver = inp.dataset.driver;
@@ -752,12 +709,10 @@ function renderBreakdown() {
       else { v = parseInt(v.replace(/[^0-9]/g, ''), 10); if (isNaN(v)) v = null; }
       if (!round.results[driver]) round.results[driver] = {};
       round.results[driver][session] = v;
-      // re-render only totals to keep inputs focused
       requestAnimationFrame(() => { renderStandings(); renderBreakdown(); });
     };
   });
 
-  // per-round bench selector
   out.querySelectorAll('.bench-select').forEach(sel => {
     sel.onchange = () => {
       const team = DATA.teams.find(t => t.id === sel.dataset.team);
@@ -806,9 +761,6 @@ function renderDriverRow(d, round, team) {
   `;
 }
 
-// ====================================================
-//  Tabs
-// ====================================================
 document.querySelectorAll('.tab').forEach(t => {
   t.onclick = () => {
     document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
@@ -818,9 +770,6 @@ document.querySelectorAll('.tab').forEach(t => {
   };
 });
 
-// ====================================================
-//  Edit mode + add round
-// ====================================================
 document.getElementById('editBtn').onclick = () => {
   document.body.classList.toggle('edit-mode');
   document.getElementById('editBtn').classList.toggle('on');
@@ -835,7 +784,6 @@ document.getElementById('addRoundBtn').onclick = () => {
   const circuit = prompt('Circuit name:') || '';
   const date = prompt('Date (e.g. "5 Apr 2026"):') || '';
   const isSprint = confirm('Is this a Sprint weekend? OK = yes, Cancel = no');
-  // default benches: copy from previous round, or last roster member
   const prev = DATA.rounds[DATA.rounds.length - 1];
   const benches = {};
   for (const team of DATA.teams) {
@@ -850,15 +798,11 @@ document.getElementById('addRoundBtn').onclick = () => {
   renderStandings(); renderBreakdown();
 };
 
-// ====================================================
-//  Export — re-bake the HTML with current DATA
-// ====================================================
 function getCurrentDataJson() {
   return JSON.stringify(DATA, null, 2);
 }
 
 document.getElementById('exportBtn').onclick = () => {
-  // grab the current HTML, replace the <script id="leagueData"> contents
   const html = document.documentElement.outerHTML;
   const newJson = getCurrentDataJson();
   const re = /(<script id="leagueData" type="application\/json">)[\s\S]*?(<\/script>)/;
@@ -878,9 +822,6 @@ function download(filename, content, mime) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-// ====================================================
-//  Init
-// ====================================================
 renderStandings();
 renderBreakdown();
 </script>
